@@ -5,7 +5,7 @@ def calculate_monthly_payment(principal: float, annual_rate: float, years: int) 
     if principal <= 0:
         raise ValueError("Сумма кредита должна быть положительной.")
     if annual_rate < 0:
-        raise ValueError("Ставка не может быть отрицательной.")
+        raise ValueError("Ставка не может быть отрицательной).")
 
     monthly_rate = annual_rate / 100 / 12
     months = years * 12
