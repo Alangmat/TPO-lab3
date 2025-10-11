@@ -13,7 +13,7 @@ def calculate():
         messagebox.showerror("Ошибка", str(e))
 
 root = tk.Tk()
-root.title("Ипотечный калькулятор")
+root.title("Ипотечный калькулятор W")
 root.geometry("350x250")
 
 tk.Label(root, text="Сумма кредита (₽):").pack()
