@@ -1,4 +1,3 @@
-import pytest
 from app.main import mortgage_payment
 
 def test_mortgage_payment_basic():
