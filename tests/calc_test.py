@@ -1,5 +1,5 @@
 import pytest
-from app.calculator import mortgage_payment
+from app.main import mortgage_payment
 
 def test_mortgage_payment_basic():
     result = mortgage_payment(1_000_000, 10, 20)
