@@ -1,9 +1,15 @@
-from app.main import mortgage_payment
+from app.calculator import calculate_monthly_payment
 
-def test_mortgage_payment_basic():
-    result = mortgage_payment(1_000_000, 10, 20)
-    assert round(result, 2) == 9650.22  # Проверка на точность результата
 
-def test_mortgage_payment_zero_rate():
-    result = mortgage_payment(1_000_000, 0, 10)
-    assert result == 1_000_000 / (10 * 12)
+def test_basic_calculation():
+    assert calculate_monthly_payment(1_000_000, 10, 20) == 9650.22
+
+
+def test_zero_rate():
+    assert calculate_monthly_payment(1_200_000, 0, 10) == 10000.0
+
+
+def test_invalid_values():
+    from pytest import raises
+    with raises(ValueError):
+        calculate_monthly_payment(-500_000, 10, 15)
