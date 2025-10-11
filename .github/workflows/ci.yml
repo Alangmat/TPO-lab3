@@ -55,7 +55,7 @@ jobs:
         run: |
           docker builder prune -f || true
           docker system prune -af || true
-          docker build --no-cache -t TPO-lab3:latest .
+          docker build --no-cache -t tpo-lab3:latest .
 
   # ---------- Деплой ----------
   deploy:
@@ -64,6 +64,6 @@ jobs:
     steps:
       - name: Deploy Docker container
         run: |
-          docker stop TPO-lab3 || true
-          docker rm TPO-lab3 || true
-          docker run -d --name TPO-lab3 -p 8000:8000 TPO-lab3:latest
+          docker stop tpo-lab3 || true
+          docker rm tpo-lab3 || true
+          docker run -d --name tpo-lab3 -p 8000:8000 tpo-lab3:latest
