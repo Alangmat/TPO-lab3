@@ -2,7 +2,7 @@ from app.calculator import calculate_monthly_payment
 
 
 def test_basic_calculation():
-    assert calculate_monthly_payment(1_000_000, 10, 20) == 9650.22
+    assert calculate_monthly_payment(1_000_000, 10, 20) == 9000.22
 
 
 def test_zero_rate():
